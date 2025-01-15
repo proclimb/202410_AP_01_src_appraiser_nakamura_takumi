@@ -321,14 +321,12 @@ function subStockEditView($param)
 			<tr>
 				<th>仕入経緯</th>
 				<td>
-					<?php
-					for ($i = 0; $i < 6; $i++) {
-					?>
-						<br />
-						<input type="radio" name="how" value="<?php print $i + 1; ?>" <?php if ($param["how"] == $i + 1) print ' checked="checked"'; ?> /> <?php print fnHowName($i); ?>
-					<?php
-					}
-					?>
+					<label><input type=radio name="how" value=1 checked>会社案件</label><br>
+					<label><input type=radio name="how" value=2>新規業者(TEL,FAX)</label><br>
+					<label><input type=radio name="how" value=3>新規業者(訪問)</label><br>
+					<label><input type=radio name="how" value=4>既存業者(契約有)</label><br>
+					<label><input type=radio name="how" value=5>既存業者(契約無)</label><br>
+					<label><input type=radio name="how" value=6>その他</label>
 				</td>
 			</tr>
 
