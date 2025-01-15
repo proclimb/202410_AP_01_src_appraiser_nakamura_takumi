@@ -254,11 +254,11 @@ function subStockEditView($param)
 			<tr>
 				<th>ランク</th>
 				<td>
-					<input type=radio name="rank" value=1 checked />A
-					<input type=radio name="rank" value=2 />B
-					<input type=radio name="rank" value=3 />C
-					<input type=radio name="rank" value=4 />D
-					<input type=radio name="rank" value=5 />E
+					<input type=radio name="rank" value=1 checked>A
+					<input type=radio name="rank" value=2>B
+					<input type=radio name="rank" value=3>C
+					<input type=radio name="rank" value=4>D
+					<input type=radio name="rank" value=5>E
 				</td>
 			</tr>
 			<tr>
@@ -284,13 +284,10 @@ function subStockEditView($param)
 			<tr>
 				<th>距離</th>
 				<td>
-					<?php
-					for ($i = 0; $i < 4; $i++) {
-					?>
-						<input type="radio" name="distance" value="<?php print $i + 1; ?>" <?php if ($param["distance"] == $i + 1) print ' checked="checked"'; ?> /> <?php print fnDistanceName($i); ?>
-					<?php
-					}
-					?>
+					<input type=radio name="distance" value=1 checked>A(5分以内)
+					<input type=radio name="distance" value=2>B(10分以内)
+					<input type=radio name="distance" value=3>C(15分以内)
+					<input type=radio name="distance" value=4>D(15分以上)
 				</td>
 			</tr>
 			<tr>
