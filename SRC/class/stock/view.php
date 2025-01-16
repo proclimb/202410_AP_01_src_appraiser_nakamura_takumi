@@ -284,10 +284,13 @@ function subStockEditView($param)
 			<tr>
 				<th>距離</th>
 				<td>
-					<input type=radio name="distance" value=1 checked>A(5分以内)
-					<input type=radio name="distance" value=2>B(10分以内)
-					<input type=radio name="distance" value=3>C(15分以内)
-					<input type=radio name="distance" value=4>D(15分以上)
+					<?php
+					for ($i = 0; $i < 4; $i++) {
+					?>
+						<input type="radio" name="distance" value="<?php print $i + 1; ?>" <?php if ($param["distance"] == $i) echo "checked";  ?> /> <?php print fnDistanceName($i); ?>
+					<?php
+					}
+					?>
 				</td>
 			</tr>
 			<tr>
@@ -321,12 +324,14 @@ function subStockEditView($param)
 			<tr>
 				<th>仕入経緯</th>
 				<td>
-					<label><input type=radio name="how" value=1 checked>会社案件</label><br>
-					<label><input type=radio name="how" value=2>新規業者(TEL,FAX)</label><br>
-					<label><input type=radio name="how" value=3>新規業者(訪問)</label><br>
-					<label><input type=radio name="how" value=4>既存業者(契約有)</label><br>
-					<label><input type=radio name="how" value=5>既存業者(契約無)</label><br>
-					<label><input type=radio name="how" value=6>その他</label>
+					<?php
+					for ($i = 0; $i < 6; $i++) {
+					?>
+						<br />
+						<input type="radio" name="how" value="<?php print $i + 1; ?>" <?php if ($param["how"] == $i + 1) echo "checked"; ?> /> <?php print fnHowName($i); ?>
+					<?php
+					}
+					?>
 				</td>
 			</tr>
 
