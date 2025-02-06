@@ -16,8 +16,7 @@ function subSell()
     }
 
     if (! $param["orderBy"]) {
-        $param["orderBy"] = 'SEARCHDT';
-        $param["orderTo"] = 'desc';
+        $param["orderBy"] = 1;
     }
 
     subMenu();
